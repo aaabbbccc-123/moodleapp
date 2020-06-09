@@ -12,7 +12,7 @@
                     <img [src]="site.avatar" class="avatar" core-external-content [siteId]="site.id" alt="{{ 'core.pictureof' | translate:{$a: site.fullname} }}" role="presentation" onError="this.src='assets/img/user-avatar.png'">
                 </ion-avatar>
             </ng-container>
-
+            
             <ng-container *ngIf="!showSiteAvatar">
                 <!-- Show site logo or a default image. -->
                 <img *ngIf="logoUrl" [src]="logoUrl" core-external-content [siteId]="site.id" role="presentation">
@@ -20,7 +20,7 @@
             </ng-container>
 
             <!-- If no sitename show big siteurl. -->
-            <p *ngIf="!siteName" class="item-heading core-siteurl">{{siteUrl}}</p>
+            <!--<p *ngIf="!siteName" class="item-heading core-siteurl">{{siteUrl}}</p>-->
             <!-- If sitename, show big sitename and small siteurl. -->
             <p *ngIf="siteName" class="item-heading core-sitename"><core-format-text [text]="siteName" [filter]="false"></core-format-text></p>
             <p *ngIf="siteName" class="core-siteurl">{{siteUrl}}</p>
